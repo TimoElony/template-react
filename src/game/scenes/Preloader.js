@@ -31,15 +31,27 @@ export class Preloader extends Scene
     {
         this.load.image('logo', '/assets/logo.png');
         this.load.image('player', '/assets/foilboard.png');
-        this.load.image('background', '/assets/background.png');
+        this.load.image('background', '/assets/1.png');
+        this.load.image('foreground', '/assets/2.png');
     }
 
     create ()
     {
         //  When all the assets have loaded, it's often worth creating global objects here that the rest of the game can use.
         //  For example, you can define global animations here, so we can use them in other scenes.
+        /* class Foil extends Phaser.GameObjects.Sprite {
+            constructor(span, chordWidth, surface, stabSurface, fuselage) {
+                this.type = 'foil';
+                this.span = span;
+                this.chordWidth = chordWidth;
+                this.surface = surface;
+                this.stabSurface = stabSurface;
+                this.fuselage = fuselage;
+            }
+        }
 
-        //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
+        const foil1 = new Foil(1000, 80, 800, 200, 600); */
+        
         this.scene.start('MainMenu');
     }
 }

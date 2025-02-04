@@ -10,13 +10,13 @@ export class Game extends Scene
     }
    
     preload() {
-        this.add.tileSprite(0, 300, 3000, 800, 'background');
-        this.add.tileSprite(3000, 300, 3000, 800, 'background');
-        this.add.tileSprite(6000, 300, 3000, 800, 'background');
+        this.add.tileSprite(0, 300, 30000, 800, 'background');
+        this.add.tileSprite(30000, 300, 30000, 800, 'background');
+        this.add.tileSprite(60000, 300, 30000, 800, 'background');
         this.player = this.physics.add.image(200, 140, 'player');
-        this.add.tileSprite(0, 300, 3000, 800, 'foreground').setAlpha(0.8);
-        this.add.tileSprite(3000, 300, 3000, 800, 'foreground').setAlpha(0.8);
-        this.add.tileSprite(6000, 300, 3000, 800, 'foreground').setAlpha(0.8);
+        this.add.tileSprite(0, 300, 30000, 800, 'foreground').setAlpha(0.8);
+        this.add.tileSprite(30000, 300, 30000, 800, 'foreground').setAlpha(0.8);
+        this.add.tileSprite(60000, 300, 30000, 800, 'foreground').setAlpha(0.8);
     }
 
     create ()
@@ -26,7 +26,7 @@ export class Game extends Scene
 
         this.cursors = this.input.keyboard.createCursorKeys();
 
-       
+        // setting up physics
         this.player.setDamping(true);
         this.player.setAngularDrag(0.1); //Pitch sensitivity
         this.player.setDrag(0.8);  //Drag of the Foil
@@ -76,7 +76,7 @@ export class Game extends Scene
             this.pump();
         }
 
-        // once it hits the water, let it only move along plane of the foil, stall at low speeds and decelerate when hitting the water
+        // once it hits the water, let it only move along plane of the foil, stall at low speeds and crash when hitting the water
         if (this.player.y  > 250) {
             this.player.body.velocity.rotate(Phaser.Math.DegToRad(this.player.body.rotation) - this.player.body.velocity.angle());
             if (this.player.y > 370) {

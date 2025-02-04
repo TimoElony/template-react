@@ -22,7 +22,7 @@ export class MainMenu extends Scene
             align: 'center'
         }).setDepth(100).setOrigin(0.5);
 
-        this.foilQuiver = [
+        const foilQuiver = [
             {   
                 name: 'beginner foil',
                 span: 1200,
@@ -48,14 +48,16 @@ export class MainMenu extends Scene
                 fuselage: 600
             }
 
-        ]
+        ];
+
+        this.registry.set('selectedFoil', foilQuiver.filter(item => item.name == 'beginner foil'));
+        
 
         EventBus.emit('current-scene-ready', this);
     }
 
     update ()
     {
-
     }
 
     changeScene ()

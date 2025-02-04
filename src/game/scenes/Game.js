@@ -10,7 +10,6 @@ export class Game extends Scene
     }
    
     preload() {
-        // already preloaded during Preload and Main Menu
         this.add.tileSprite(0, 300, 3000, 800, 'background');
         this.add.tileSprite(3000, 300, 3000, 800, 'background');
         this.add.tileSprite(6000, 300, 3000, 800, 'background');

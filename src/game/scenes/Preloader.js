@@ -39,18 +39,6 @@ export class Preloader extends Scene
     {
         //  When all the assets have loaded, it's often worth creating global objects here that the rest of the game can use.
         //  For example, you can define global animations here, so we can use them in other scenes.
-        /* class Foil extends Phaser.GameObjects.Sprite {
-            constructor(span, chordWidth, surface, stabSurface, fuselage) {
-                this.type = 'foil';
-                this.span = span;
-                this.chordWidth = chordWidth;
-                this.surface = surface;
-                this.stabSurface = stabSurface;
-                this.fuselage = fuselage;
-            }
-        }
-
-        const foil1 = new Foil(1000, 80, 800, 200, 600); */
         
         this.scene.start('MainMenu');
     }

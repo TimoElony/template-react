@@ -17,7 +17,7 @@ const config = {
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 200 }, // Gravity to pull the bird down
+            gravity: { y: 300 }, // Gravity to pull the bird down
             debug: false
         }
     },

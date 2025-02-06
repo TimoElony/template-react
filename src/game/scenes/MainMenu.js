@@ -27,6 +27,7 @@ export class MainMenu extends Scene
                 name: 'beginner foil',
                 span: 1200,
                 chordWidth: 400,
+                depth: 20,
                 surface: 2000,
                 stabSurface: 400,
                 fuselage: 800
@@ -35,6 +36,7 @@ export class MainMenu extends Scene
                 name: 'standard foil',
                 span: 1000,
                 chordWidth: 200,
+                depth: 10,
                 surface: 1200,
                 stabSurface: 400,
                 fuselage: 700
@@ -43,6 +45,7 @@ export class MainMenu extends Scene
                 name: 'high aspect foil',
                 span: 1200,
                 chordWidth: 80,
+                depth: 5,
                 surface: 800,
                 stabSurface: 200,
                 fuselage: 600
